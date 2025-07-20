@@ -1,7 +1,10 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 import { Body, Controller, Inject, OnModuleInit, Post } from '@nestjs/common';
 import { ClientProxy } from '@nestjs/microservices';
+import { ApiOperation } from '@nestjs/swagger';
 import { firstValueFrom } from 'rxjs';
+import { CreateUserDto, LoginUserDto } from '@lady-thee/common-contracts';
 
 @Controller('auth') //api/v1/auth
 export class AppController implements OnModuleInit {
@@ -12,8 +15,11 @@ export class AppController implements OnModuleInit {
     await this.authClient.connect();
   }
 
+  @ApiOperation({
+    description: 'Register user',
+  })
   @Post('register')
-  async createUser(@Body() createUserDto: any) {
+  async createUser(@Body() createUserDto: CreateUserDto) {
     const response = this.authClient.send(
       {
         cmd: 'create_user',
@@ -23,7 +29,11 @@ export class AppController implements OnModuleInit {
     return await firstValueFrom(response);
   }
 
-  async login(@Body() loginUserDto: any) {
+  @ApiOperation({
+    description: 'Log in user',
+  })
+  @Post('login')
+  async login(@Body() loginUserDto: LoginUserDto) {
     const response = this.authClient.send(
       {
         cmd: 'login_user',
