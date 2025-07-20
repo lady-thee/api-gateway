@@ -28,8 +28,7 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api/v1/docs', app, document);
 
-  await app.listen(process.env.PORT ?? 3000);
-  await app.listen(3000); // API Gateway listens on port 3000
+  await app.listen(3000);
   console.log('API Gateway listening on port 3000');
   logger.log('API Gateway started at port 3000');
 }

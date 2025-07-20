@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@lady-thee/common-contracts':
+        specifier: ^1.0.1
+        version: 1.0.1(@nestjs/common@11.1.3(class-transformer@0.5.1)(class-validator@0.14.2)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.3)(class-transformer@0.5.1)(reflect-metadata@0.2.2)
       '@nestjs/common':
         specifier: ^11.0.1
         version: 11.1.3(class-transformer@0.5.1)(class-validator@0.14.2)(reflect-metadata@0.2.2)(rxjs@7.8.2)
@@ -638,6 +641,9 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.9':
     resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
+
+  '@lady-thee/common-contracts@1.0.1':
+    resolution: {integrity: sha512-XVDaaknQWnO0z8CeB7x9jrUb5EFcTx5hEXGRg55W6WDs6fZ/gB2mJA7ytlxqCMdbQR4De5iK7HfyebEV3MLjFA==, tarball: https://npm.pkg.github.com/download/@lady-thee/common-contracts/1.0.1/3b55bf8fb5a4eb5b52f7d1bbbc8944a0b8d5bafc}
 
   '@lukeed/csprng@1.1.0':
     resolution: {integrity: sha512-Z7C/xXCiGWsg0KuKsHTKJxbWhpI3Vs5GwLfOean7MGyVFGqdRgBbAjOCh6u4bbjPc/8MJ2pZmK/0DLdCbivLDA==}
@@ -4257,6 +4263,17 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.4
+
+  '@lady-thee/common-contracts@1.0.1(@nestjs/common@11.1.3(class-transformer@0.5.1)(class-validator@0.14.2)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.3)(class-transformer@0.5.1)(reflect-metadata@0.2.2)':
+    dependencies:
+      '@nestjs/swagger': 11.2.0(@nestjs/common@11.1.3(class-transformer@0.5.1)(class-validator@0.14.2)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.3)(class-transformer@0.5.1)(class-validator@0.14.2)(reflect-metadata@0.2.2)
+      class-validator: 0.14.2
+    transitivePeerDependencies:
+      - '@fastify/static'
+      - '@nestjs/common'
+      - '@nestjs/core'
+      - class-transformer
+      - reflect-metadata
 
   '@lukeed/csprng@1.1.0': {}
 
